@@ -1,5 +1,4 @@
 public class Ford extends Car {
-
     int weight;
 
     int manufacturerDiscount;

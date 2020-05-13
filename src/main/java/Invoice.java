@@ -1,5 +1,4 @@
 public class Invoice {
-
     public int quantityPurchased = 0;
 
     String partNumberInvoice = "xnA123";

@@ -1,5 +1,4 @@
 public class Truck extends Car {
-
     int weight;
 
     public Truck(int speed, double regularPrice, String color, int weight) {

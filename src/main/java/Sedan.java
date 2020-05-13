@@ -1,5 +1,4 @@
 public class Sedan extends Car {
-
     int length;
 
     public Sedan(int speed, double regularPrice, String color, int length) {
