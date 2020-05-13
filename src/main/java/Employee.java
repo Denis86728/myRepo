@@ -6,10 +6,10 @@ public class Employee {
 
     double monthly_salary;
 
-    public Employee() {
-        setFirst_name(first_name);
-        setLast_name(last_name);
-        setMonthly_salary(monthly_salary);
+    public Employee(String first_name, String last_name, double monthly_salary) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.monthly_salary = monthly_salary;
     }
 
     public String getFirst_name() {

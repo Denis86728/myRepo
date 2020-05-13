@@ -1,17 +1,17 @@
 public class Invoice {
-    public int quantityPurchased = 0;
+    public int quantityPurchased;
 
-    String partNumberInvoice = "xnA123";
+    String partNumberInvoice;
 
-    String partDescription = "description1";
+    String partDescription;
 
-    double pricePerItem = 10.5;
+    double pricePerItem;
 
-    public Invoice() {
-        setPartNumberInvoice(partNumberInvoice);
-        setPartDescription(partDescription);
-        setQuantityPurchased(quantityPurchased);
-        setPricePerItem(pricePerItem);
+    public Invoice(int quantityPurchased, String partNumberInvoice, String partDescription, double pricePerItem) {
+        this.quantityPurchased = quantityPurchased;
+        this.partNumberInvoice = partNumberInvoice;
+        this.partDescription = partDescription;
+        this.pricePerItem = pricePerItem;
     }
 
     public String getPartNumberInvoice() {
@@ -35,6 +35,9 @@ public class Invoice {
     }
 
     public void setQuantityPurchased(int quantityPurchased) {
+        if (quantityPurchased <= 0) {
+            quantityPurchased = 0;
+        }
         this.quantityPurchased = quantityPurchased;
     }
 
@@ -43,26 +46,22 @@ public class Invoice {
     }
 
     public void setPricePerItem(double pricePerItem) {
+        if (pricePerItem <= 0.0) {
+            pricePerItem = 0;
+        }
         this.pricePerItem = pricePerItem;
     }
 
-    public void getInvoiceAmount(int quantityPurchased, double pricePerItem) {
-        if (quantityPurchased <= 0) {
-            quantityPurchased = 0;
-            System.out.println("Quantity cannot be " + quantityPurchased);
-        }
-        if (pricePerItem <= 0.0) {
-            pricePerItem = 0;
-            System.out.println("PrincePerItem cannot be " + pricePerItem);
-        }
-        System.out.println("Invoice is: " + quantityPurchased * pricePerItem + "$");
+    public double getInvoiceAmount() {
+        return quantityPurchased * pricePerItem;
     }
 
     public void getInfo() {
         System.out
             .println(
-                "The invoice with number " + getPartNumberInvoice() + " and description " + getPartDescription()
+                "The invoice with number " + partNumberInvoice + " and description " + partDescription
                     + " has "
-                    + getQuantityPurchased() + " quantity purchased at " + getPricePerItem());
+                    + quantityPurchased + " quantity purchased at " + pricePerItem);
     }
+
 }

@@ -1,5 +1,4 @@
 public class Date {
-
     int month;
 
     int day;
@@ -17,7 +16,7 @@ public class Date {
     }
 
     public void setMonth(int month) {
-        if(month >= 0 && month<=12){
+        if(month > 0 && month<=12){
             this.month = month;
         }
         else
@@ -31,7 +30,7 @@ public class Date {
     }
 
     public void setDay(int day) {
-        if(day >= 0 && day <=30){
+        if(day >= 0 && day <= 31){
             this.day = day;
         }
         else

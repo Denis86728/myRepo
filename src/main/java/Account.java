@@ -20,7 +20,7 @@ public class Account {
             balance = balance - amountDebit;
         }
         else{
-            System.out.println("Debit amount exceeded account balance which is %d");
+            System.out.printf("Debit amount exceeded account balance which is %d", balance);
         }
     }
 }

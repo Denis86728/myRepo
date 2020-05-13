@@ -1,28 +1,24 @@
-public class InvoiceTest{
+public class InvoiceTest {
 
     public static void main(String[] args) {
 
-        Invoice invoice1 = new Invoice();
-        Invoice invoice2 = new Invoice();
+        Invoice invoice1 = new Invoice(0, "xnA123", "description1", 0);
+        Invoice invoice2 = new Invoice(0, "xnB123", "description2", 0);
+
         invoice1.getInfo();
-        invoice1.getInvoiceAmount(invoice1.getQuantityPurchased(), invoice1.getPricePerItem());
-
-        System.out.println(" ");
-        System.out.println("Invoice has been updated with the following data.");
-        System.out.println(" ");
-
-        invoice1.setPartNumberInvoice("xnA123");
-        invoice1.setPartDescription("description2");
-        invoice1.setQuantityPurchased(2);
+        invoice1.setQuantityPurchased(5);
         invoice1.setPricePerItem(10.5);
+        System.out.println("The invoice details have been updated");
         invoice1.getInfo();
-        invoice1.getInvoiceAmount(invoice1.getQuantityPurchased(), invoice1.getPricePerItem());
+        System.out.println("Invoice amount: " + invoice1.getInvoiceAmount() + "$");
 
-        invoice2.setPartNumberInvoice("xnA124");
-        invoice2.setPartDescription("description3");
-        invoice2.setQuantityPurchased(5);
-        invoice2.setPricePerItem(15.0);
+        System.out.println(" ");
+
         invoice2.getInfo();
-        invoice2.getInvoiceAmount(invoice2.getQuantityPurchased(), invoice2.getPricePerItem());
+        invoice2.setQuantityPurchased(10);
+        invoice2.setPricePerItem(15.5);
+        System.out.println("The invoice details have been updated");
+        invoice2.getInfo();
+        System.out.println("Invoice amount: " + invoice2.getInvoiceAmount() + "$");
     }
 }

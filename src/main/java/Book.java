@@ -1,5 +1,4 @@
 public class Book {
-
     String book_name;
 
     int isbn_number;
