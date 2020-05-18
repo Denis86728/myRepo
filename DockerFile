@@ -2,4 +2,4 @@ FROM java:8-jdk-alpine
 COPY ./build/libs/myRepo-0.0.1-SNAPSHOT.war /usr/app/
 WORKDIR /usr/app
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "myRepodocker-0.0.1-SNAPSHOT.war"]
+ENTRYPOINT ["java", "-jar", "myRepo-0.0.1-SNAPSHOT.war"]
