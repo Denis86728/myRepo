@@ -1,9 +1,8 @@
 version: "3.2"
 
 services:
-  myRepo:
-    build: ./myrepo
-    volumes:
-      - ./product:/usr/src/myrepo
-    ports:
-      - 5001:80
+  web:
+    image: nginx
+
+  database:
+    image:redis
