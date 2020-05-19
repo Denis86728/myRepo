@@ -1,5 +1,3 @@
 FROM java:8-jdk-alpine
-COPY ./build/libs/myrepo-0.0.1-SNAPSHOT.war /usr/app/
-WORKDIR /usr/app
+COPY ./usr/src/myRepo
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "myRepo-0.0.1-SNAPSHOT.war"]
