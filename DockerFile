@@ -1,4 +1,5 @@
 FROM java:8-jdk-alpine
 COPY ./out/artifacts/myRepo_jar/myRepo.jar /usr/app
+WORKDIR /usr/app
 EXPOSE 80
 ENTRYPOINT ["java", "-jar", "myRepo.jar"]
