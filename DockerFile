@@ -1,3 +1,4 @@
 FROM java:8-jdk-alpine
-COPY . /usr/src/myRepo
-EXPOSE 8080
+COPY ./out/artifacts/myRepo_jar/myRepo.jar /usr/app
+EXPOSE 80
+ENTRYPOINT ["java", "-jar", "myRepo.jar"]
