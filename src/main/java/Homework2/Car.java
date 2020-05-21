@@ -1,3 +1,5 @@
+package Homework2;
+
 public class Car {
     int speed;
     double regularPrice;

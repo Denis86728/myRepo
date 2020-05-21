@@ -1,3 +1,5 @@
+package Homework2;
+
 public class SavingsAccount {
     private static double annualInterestRate;
 

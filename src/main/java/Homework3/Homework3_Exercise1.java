@@ -1,3 +1,5 @@
+package Homework3;
+
 import sun.awt.image.ImageWatched;
 
 import java.util.ArrayList;

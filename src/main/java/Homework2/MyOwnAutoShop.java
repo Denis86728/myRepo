@@ -1,3 +1,5 @@
+package Homework2;
+
 public class MyOwnAutoShop {
 
     public static void main(String[] args) {
