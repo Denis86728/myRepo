@@ -1,0 +1,3 @@
+"Car, Mercedes, C180, 20000, 220, Automatic, Sedan"
+"Motorcycle, Honda, Fury, 15000, 150, Cruiser"
+“Bicycle", T.Y.S, S100184, 15, 1000"
